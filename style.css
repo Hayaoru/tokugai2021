@@ -1,0 +1,218 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 5px;
+  margin: 0;
+}
+
+/* ヘッダー */
+header {
+  height: 50px;
+  background-color: #f0f0f0;
+  padding: 10px 0 solid ;
+  display: flex;
+}
+.logo{
+  width :30%;
+  height :80%;
+ }
+
+
+.heading {
+  width: 50%;
+  margin-left: 30px;
+}
+
+.navbar {
+  width: 50%;
+  padding: 20px;
+}
+
+.nav-lists {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+.login{
+  background-color: #ED951A
+}
+
+.contents {
+  background-color: white;
+}
+
+
+
+.first-view{
+  width: 100vw;
+  background-color:white;
+  
+}
+
+.main-content{
+  background-color:#d3d0d0;
+  height: 100%;
+  width: 100vw;
+}
+
+.top-image {
+width: 640px;
+height:360px;
+display: block;
+margin-right: auto;
+margin-left: auto;
+}
+
+.tab{
+background-color: coral;
+height: 30px;
+width: 100%;
+}
+
+.content{
+  width: 900px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* 新着情報 */
+.upper-content{
+  
+  height: 300px;
+  width :800px;
+  background-color:white;
+}
+
+.heading-name {
+  text-align: center;
+  border-bottom: 1px solid red;
+  width: 200px;
+  margin:  0 auto 40px auto;
+}
+.rank{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.messages {
+ 
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  font-size: 18px;
+  margin: 0 0 16px 70px;
+}
+
+.message-date {
+  padding-right: 40px;
+}
+
+
+.middle-content{
+  height: 450px;
+  width: 800px;
+  background-color: white;
+}
+
+.stylist-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+}
+
+.view-image {
+  height: 200px;
+  margin:30px;
+}
+
+.stylist-name {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.bottom-content {
+  height: 100px ;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ED951A;
+}
+.bottom-content {
+  height: 200px ;
+  width: 800px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-field, .large-field {
+  width: 400px;
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid #b5aaaa;
+  display: block;
+}
+
+.small-field {
+  margin: 0 auto 15px;
+}
+
+.large-field {
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+.send {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: rgb(222, 116, 23);
+  color:white;
+  display: block;
+}
+.b-send {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid rgb(222, 116, 23);
+  background-color: white;
+  color:rgb(222, 116, 23);
+  display: block;
+}
+
+.rea{
+  text-align: center;
+ 
+  width: 300px;
+  margin:auto;
+}
+
+/* フッター */
+footer {
+  height: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: gray;
+}
