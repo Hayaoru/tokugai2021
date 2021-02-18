@@ -71,7 +71,7 @@ li {
   width: 100vw;
 }
 
-.top-image {
+.top_image {
 width: 640px;
 height:360px;
 display: block;
@@ -139,7 +139,7 @@ width: 100vw;
   margin: 30px 0;
 }
 
-.view-image {
+.view_image {
   height: 200px;
   margin:30px;
 }

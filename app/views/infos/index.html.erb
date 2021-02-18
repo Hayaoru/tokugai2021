@@ -1,14 +1,19 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tokugai</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    
   </head>
   <body>
     <header>
       <div class="heading">
-        <img src="images/rogo.png" alt="ロゴ" class="logo">
+        <%= link_to image_tag("rogo.png", class: :logo), root_path %>
         
       </div>
       <div class="navbar">
@@ -23,7 +28,8 @@
 
     <div class="contents">
       <div class="first-view">
-        <img src="images/top.jpg" alt="トップ画面" class="top-image">
+      <%= link_to image_tag("top.jpg", class: :top_image), root_path %>
+        
       </div>
       <div class="tab">
         
@@ -36,11 +42,11 @@
       <div class="middle-content"> 
         <ul class="list">
           <li>
-            <img src="images/book.jpg" alt="staff1" class="view-image">
+            <%= link_to image_tag("book.jpg", class: :view_image), root_path %>
             <h4 class="stylist-name">本の買い方</h4>
           </li>
           <li>
-            <img src="images/2.jpg" alt="staff2" class="view-image">
+            <%= link_to image_tag("2.jpg", class: :view_image), root_path %>
             <h4 class="stylist-name">ポイント還元</h4>
           </li>
           
