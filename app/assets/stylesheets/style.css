@@ -25,6 +25,7 @@ header {
 .logo{
   width :20%;
   height :80%;
+  margin:3px;
  }
 
 
@@ -50,7 +51,8 @@ li {
 }
 
 .login{
-  background-color: #ED951A
+  background-color: #ED951A;
+  padding: 5px;
 }
 
 .contents {
@@ -168,6 +170,7 @@ width: 100vw;
   align-items: center;
 }
 
+/* ユーザー登録フォーム */
 .small-field, .large-field {
   width: 400px;
   font-size: 16px;
@@ -183,6 +186,12 @@ width: 100vw;
 .large-field {
   height: 200px;
   margin: 0 auto 30px;
+}
+
+.s-field{
+  margin: 0 auto 15px ;
+  display: block;
+  
 }
 
 .send {
@@ -208,7 +217,37 @@ width: 100vw;
   text-align: center;
  
   width: 300px;
-  margin:auto;
+  margin:30px auto;
+}
+
+.input-default{
+  width: 400px;
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid #b5aaaa;
+  display: flex;
+  margin:10px auto;
+}
+
+.login-org-btn {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: rgb(222, 116, 23);
+  color:white;
+  display: block;
+}
+
+.log-content{
+  width: 400px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.form-text{
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* フッター */
