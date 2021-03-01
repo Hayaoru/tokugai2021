@@ -129,7 +129,7 @@ width: 100vw;
 }
 
 
-.middle-content{
+.info-content{
   height: 450px;
   width: 800px;
   background-color: white;
@@ -256,4 +256,5 @@ footer {
   background-color: #f0f0f0;
   text-align: center;
   color: gray;
+  width:100vw;
 }
