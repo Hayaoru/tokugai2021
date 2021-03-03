@@ -1,0 +1,91 @@
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tokugai</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <%= link_to image_tag("rogo.png", class: :logo), root_path %>
+        
+      </div>
+      <div class="navbar">
+      <ul class="nav-lists">
+          <li>カテゴリからさがす</li>
+          <li>キーワードからさがす</li>
+          <% if user_signed_in? %>
+        
+         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %></li> 
+      <% else %>
+    <li><%= link_to 'ログイン・新規登録', new_user_session_path, class: "login" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
+    <div class="infos-new">
+<div class="infos-main">
+    <h2 class="heading-name">編集内容の入力</h2>
+    <%= form_with model: @infomation, url:infomation_path,local: true do |f| %>
+
+    
+       <%# <%= render 'shared/error_messages', model: f.object %>   
+  <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"infomation-image" %>
+      </div>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id,Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
+        
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :main, class:"items-text", id:"item-info", placeholder:"内容" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+
+      <div class="weight-bold-text">
+        URL
+        <span class="indispensable2">任意</span>
+      </div>
+      <%= f.text_area :url, class:"items-text", id:"item-name", placeholder:"http://", maxlength:"40" %>
+    </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "編集する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+
+    
+    <% end %>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tokugai</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <%= link_to image_tag("rogo.png", class: :logo), root_path %>
+        
+      </div>
+      <div class="navbar">
+      <ul class="nav-lists">
+          <li>カテゴリからさがす</li>
+          <li>キーワードからさがす</li>
+          <% if user_signed_in? %>
+        
+         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %></li> 
+      <% else %>
+    <li><%= link_to 'ログイン・新規登録', new_user_session_path, class: "login" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
+    <div class="infos-new">
+<div class="infos-main">
+    <h2 class="heading-name">投稿内容</h2>
+    <%= form_with model: @infomation, url:infomations_path,local: true do |f| %>
+
+    
+       <%# <%= render 'shared/error_messages', model: f.object %>   
+  <div class="img-upload">
+      <div class="weight-bold-text">
+       <%= @infomation.title %>
+      </div>
+      <%= image_tag @infomation.image ,class:"info-box-img" %>
+        
+    <div class="new-items">
+      
+      
+      <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          
+        </div>
+        <%= @infomation.category.name %>
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          説明
+          
+        </div>
+        <%= @infomation.main %>
+      </div>
+
+      <div class="weight-bold-text">
+        URL
+        
+      </div>
+      <%text=@infomation.url%>
+      <%uri_reg = URI.regexp(%w[http https])%>
+      <%text.gsub!(uri_reg) {%Q{<a href="#{$&}">#{$&}</a>}}%>
+      
+    </div>
+
+
+    <div class="sell-btn-contents">
+    <%= link_to "編集",edit_infomation_path, class: 'send'  %>
+      </div>
+    
+      
+    </div>
+<div class="sell-btn-contents">
+      <%=link_to '削除', infomation_path(@infomation.id), method: :delete, class:"back-btn" %>
+    </div>
+
+    
+    <% end %>

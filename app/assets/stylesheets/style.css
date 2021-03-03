@@ -35,7 +35,7 @@ header {
 }
 
 .navbar {
-  width: 50%;
+  width: 50vw;
   padding: 20px;
 }
 
@@ -44,6 +44,7 @@ header {
   padding: 0;
   display: flex;
   justify-content: space-around;
+  
 }
 
 li {
@@ -129,8 +130,8 @@ width: 100vw;
 }
 
 
-.middle-content{
-  height: 450px;
+.info-content{
+  height: auto;
   width: 800px;
   background-color: white;
 }
@@ -149,6 +150,7 @@ width: 100vw;
 .stylist-name {
   font-size: 16px;
   text-align: center;
+  margin:0;
 }
 
 
@@ -196,7 +198,7 @@ width: 100vw;
 
 .send {
   width: 200px;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 15px;
   border: 1px solid white;
   background-color: rgb(222, 116, 23);
@@ -256,4 +258,123 @@ footer {
   background-color: #f0f0f0;
   text-align: center;
   color: gray;
+  width:100vw;
+}
+
+/* 投稿ボタン */
+.purchase-btn {
+  width: 120px;
+  background: #de1447;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
+/* 投稿ページ */
+.infos-new{
+width:300px;
+}
+
+.infos-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 350px;
+  padding: 10vh 15vw;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.indispensable2 {
+  background: #010101;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.new-items {
+  padding: 2vh 0;
+}
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.select-box{
+  padding:5px 10px;
+  margin-bottom: 20px;
+}
+
+/* 下部ボタン */
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sell-btn {
+  background: rgb(222, 116, 23);
+  border: 1px solid rgb(222, 116, 23);
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  padding-top: 3px;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
+/* 詳細画面 */
+
+.info-box-img{
+  margin: 0 auto;
+  display: flex;
+  max-width: 400px;
+}
+
+.show{
+  margin-top: 5px;
 }

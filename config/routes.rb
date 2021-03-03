@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'infos/index'
-  root to: "infos#index"
+  root to: "infomations#index"
+  resources :infomations
 end
