@@ -25,6 +25,9 @@ https://gyazo.com/550679dcf3e512c9bf2e62eeeb76287a
 Docker環境、AWS EC2導入
 
 # テーブル設計
+ER図
+https://gyazo.com/2d47689cfa9aec9c352edf94281cd933
+
 ## users テーブル
 | Column             | Type   | Options   |
 | ------------------ | ------ | --------- |
