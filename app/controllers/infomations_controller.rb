@@ -1,7 +1,7 @@
 class InfomationsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy, :edit]
   before_action :info_find, only: [:show, :destroy, :edit, :update]
-  before_action :move_to, only: [:edit, :update, :destroy]
+  before_action :move_to, only: [:new,:edit, :update, :destroy]
 
   def index
     @infomations = Infomation.all
